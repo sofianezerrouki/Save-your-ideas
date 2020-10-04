@@ -6,10 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- *
- * @author ASUS
- */
+
 public class SaveIdeas extends Application {
     
     @Override
