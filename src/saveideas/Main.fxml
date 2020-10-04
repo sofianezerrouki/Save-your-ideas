@@ -6,4 +6,39 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="saveideas.MainController" />
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="saveideas.MainController">
+   <children>
+      <VBox layoutX="6.0" layoutY="6.0" prefHeight="386.0" prefWidth="70.0" spacing="30.0">
+         <children>
+            <Label text="Id" />
+            <Label text="Title" />
+            <Label text="Author" />
+            <Label text="Idea" />
+            <Label text="Type" />
+            <Label text="Date" />
+         </children>
+      </VBox>
+      <VBox layoutX="76.0" layoutY="3.0" prefHeight="392.0" prefWidth="166.0" spacing="15.0">
+         <children>
+            <TextField />
+            <TextField />
+            <TextField />
+            <TextArea prefHeight="54.0" prefWidth="265.0" />
+            <TextField />
+            <TextField />
+         </children>
+      </VBox>
+      <TableView layoutX="264.0" layoutY="14.0" prefHeight="315.0" prefWidth="655.0">
+        <columns>
+          <TableColumn prefWidth="77.0" text="ID" />
+          <TableColumn prefWidth="79.0" text="Title" />
+            <TableColumn prefWidth="91.0" text="Author" />
+            <TableColumn prefWidth="142.0" text="Idea" />
+            <TableColumn prefWidth="128.0" text="Type" />
+            <TableColumn prefWidth="137.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="102.0" layoutY="386.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" text="Save it" />
+   </children>
+</AnchorPane>
