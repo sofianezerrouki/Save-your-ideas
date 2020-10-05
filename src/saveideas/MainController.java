@@ -67,13 +67,14 @@ public class MainController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        showIdeas();
     }    
     
     public Connection getConnection(){
         Connection conn ;
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/saveit","root","");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/saveit","root","");
+            System.out.println("1 => connection success");
             return conn;
         } catch (Exception e) {
             System.out.println("Error : "+ e.getMessage());
@@ -93,18 +94,18 @@ public class MainController implements Initializable {
             
             Ideas ideas;
             while(rs.next()){
-                Ideas idea= new Ideas(rs.getInt("id"),
+                 ideas= new Ideas(rs.getInt("id"),
                                   rs.getString("title"),
                                   rs.getString("author"),
                                   rs.getString("idea"),
                                   rs.getString("type"),
                                   rs.getString("date"));
-                IdeasList.add(idea);
+                IdeasList.add(ideas);
             }
             
         } catch (Exception e) {
         }
-        return null;
+        return IdeasList;
     }
     
     public void showIdeas(){
@@ -115,6 +116,7 @@ public class MainController implements Initializable {
         colidea.setCellValueFactory(new PropertyValueFactory<Ideas,String>("idea"));
         coltype.setCellValueFactory(new PropertyValueFactory<Ideas,String>("type"));
         coldate.setCellValueFactory(new PropertyValueFactory<Ideas,String>("date"));
+        tableview.setItems(ideas);
     }
     
 }
