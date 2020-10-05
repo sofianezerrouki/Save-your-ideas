@@ -6,7 +6,6 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="939.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="saveideas.MainController">
    <children>
       <VBox layoutX="6.0" layoutY="6.0" prefHeight="386.0" prefWidth="70.0" spacing="30.0">
@@ -19,26 +18,28 @@
             <Label text="Date" />
          </children>
       </VBox>
-      <VBox layoutX="76.0" layoutY="3.0" prefHeight="392.0" prefWidth="166.0" spacing="15.0">
+      <VBox layoutX="76.0" layoutY="3.0" prefHeight="356.0" prefWidth="187.0" spacing="15.0">
          <children>
-            <TextField />
-            <TextField />
-            <TextField />
-            <TextArea prefHeight="54.0" prefWidth="265.0" />
-            <TextField />
-            <TextField />
+            <TextField fx:id="tfid" />
+            <TextField fx:id="tftitle" />
+            <TextField fx:id="tfauthor" />
+            <TextArea fx:id="taidea" prefHeight="54.0" prefWidth="265.0" />
+            <TextField fx:id="tftype" />
+            <TextField fx:id="tfdate" />
          </children>
       </VBox>
-      <TableView layoutX="264.0" layoutY="14.0" prefHeight="315.0" prefWidth="655.0">
+      <TableView fx:id="tableview" layoutX="292.0" layoutY="14.0" prefHeight="468.0" prefWidth="627.0">
         <columns>
-          <TableColumn prefWidth="77.0" text="ID" />
-          <TableColumn prefWidth="79.0" text="Title" />
-            <TableColumn prefWidth="91.0" text="Author" />
-            <TableColumn prefWidth="142.0" text="Idea" />
-            <TableColumn prefWidth="128.0" text="Type" />
-            <TableColumn prefWidth="137.0" text="Date" />
+          <TableColumn fx:id="colid" prefWidth="77.0" text="ID" />
+          <TableColumn fx:id="coltitle" prefWidth="79.0" text="Title" />
+            <TableColumn fx:id="colauthor" prefWidth="91.0" text="Author" />
+            <TableColumn fx:id="colidea" prefWidth="142.0" text="Idea" />
+            <TableColumn fx:id="coltype" prefWidth="128.0" text="Type" />
+            <TableColumn fx:id="coldate" prefWidth="137.0" text="Date" />
         </columns>
       </TableView>
-      <Button layoutX="102.0" layoutY="386.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="140.0" text="Save it" />
+      <Button fx:id="btnsave" layoutX="165.0" layoutY="348.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="98.0" text="Save it" />
+      <Button fx:id="btnupdate" layoutX="41.0" layoutY="437.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="98.0" text="Update" />
+      <Button fx:id="btndelete" layoutX="165.0" layoutY="437.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="98.0" text="Delete" />
    </children>
 </AnchorPane>
